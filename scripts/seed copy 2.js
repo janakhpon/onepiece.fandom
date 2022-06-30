@@ -1,3 +1,5 @@
+// import { PrismaClient } from "@prisma/client";
+// import data from "../data/group.json";
 const { PrismaClient } = require("@prisma/client");
 const data = require("../data/group.json")
 
@@ -10,9 +12,7 @@ async function main() {
       data: {
         name: group.name,
         totalBounty: group.totalBounty,
-        members: {
-          create: group.members
-        }
+        members: group.members
       }
     });
     console.log(`Created pirateGroup: ${pirateGroup.name}`);
