@@ -7,8 +7,14 @@ datasource db {
   url      = "file:../data/dev.db"
 }
 
-model member {
-  name       String  @id
+model PirateGroup {
+  name        String   @id
+  totalBounty Int
+  members     Member[]
+}
+
+model Member {
+  name       String      @id
   name_jp    String?
   image      String
   origin     String
@@ -21,5 +27,7 @@ model member {
   battling   String?
   avatar     String?
   bounty     Int?
+  memberName String
+  crewName   String
+  crewof     PirateGroup @relation(fields: [memberName], references: [name])
 }
-
