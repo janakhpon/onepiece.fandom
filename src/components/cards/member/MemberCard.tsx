@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { PaperClipIcon } from "@heroicons/react/solid";
 import { withBasePath } from "../../../lib/helper";
 
 export interface IMemberCard {
