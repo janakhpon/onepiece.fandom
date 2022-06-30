@@ -22,3 +22,4 @@ model member {
   avatar     String?
   bounty     Int?
 }
+

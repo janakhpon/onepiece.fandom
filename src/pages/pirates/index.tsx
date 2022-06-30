@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { GetStaticProps } from "next";
-import Layout from "@/components/utility/layout/home/HomeLayout";
+import Layout from "@/components/utility/layout/crew/CrewLayout";
 import MemberList from "@/components/list/member/MemberList";
 import { IMemberCard } from "@/components/cards/member/MemberCard";
-import prisma from "../lib/prisma";
+import prisma from "../../lib/prisma";
 
 // export interface MemberType {
 //   name: string;
