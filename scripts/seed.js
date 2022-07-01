@@ -10,6 +10,7 @@ async function main() {
       data: {
         name: group.name,
         totalBounty: group.totalBounty,
+        image: group.image,
         members: {
           create: group.members
         }

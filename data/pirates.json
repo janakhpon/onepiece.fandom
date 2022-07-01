@@ -7,7 +7,6 @@
       "members": [
         {
           "name": "Brook",
-          "crewName": "Brook",
           "name_jp": "ブルック",
           "image": "brook.jpg",
           "origin": "West Blue",
@@ -19,11 +18,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Swordman - Use devil fruit power + sword",
           "avatar": "brook_avatar.png",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Brook"
         },
         {
           "name": "Franky",
-          "crewName": "Franky",
           "name_jp": "フランキー",
           "image": "franky.jpg",
           "origin": "South Blue",
@@ -35,11 +35,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Fighter - Use cyborg technology",
           "avatar": "franky_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Franky"
         },
         {
           "name": "Jimbei",
-          "crewName": "Jimbei",
           "name_jp": "ジンベエ",
           "image": "jinbe.jpg",
           "origin": "Ryugu Kingdom",
@@ -51,11 +52,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Fighter - Use karate skill + fishman jutsu",
           "avatar": "jinbe_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Jimbei"
         },
         {
           "name": "Monkey D. Luffy",
-          "crewName": "Monkey D. Luffy",
           "name_jp": "モンキー・Dディー・ルフィ",
           "image": "luffy.jpg",
           "origin": "East Blue",
@@ -67,11 +69,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Fighter - Use Devil Fruit power with Haki",
           "avatar": "luffy_avatar.jpg",
-          "bounty": 3000000
+          "bounty": 3000000,
+          "memberName": "Straw Hat",
+          "crewName": "Monkey D. Luffy"
         },
         {
           "name": "Nami",
-          "crewName": "Nami",
           "name_jp": "ナミ",
           "image": "nami.jpg",
           "origin": "East Blue",
@@ -83,11 +86,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Tool user - Use scientic electric tools plus Zeus ",
           "avatar": "nami_avatar.png",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Nami"
         },
         {
           "name": "Nico Robin",
-          "crewName": "Nico Robin",
           "name_jp": "ニコ・ロビン",
           "image": "robin.jpg",
           "origin": "West Blue",
@@ -99,11 +103,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Devil Fruit User - use devil fruit power",
           "avatar": "robin_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Nico Robin"
         },
         {
           "name": "Roronoa Zoro",
-          "crewName": "Roronoa Zoro",
           "name_jp": "ロロノア・ゾロ",
           "image": "zoro.jpg",
           "origin": "East Blue",
@@ -115,11 +120,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Swordman - Use three swords style with Haki",
           "avatar": "zoro_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Roronoa Zoro"
         },
         {
           "name": "Sanji",
-          "crewName": "Sanji",
           "name_jp": "サンジ",
           "image": "sanji.jpg",
           "origin": "North Blue",
@@ -131,11 +137,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Fighter - Use legs with Haki",
           "avatar": "sanji_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Sanji"
         },
         {
           "name": "Tony Tony Chopper",
-          "crewName": "Tony Tony Chopper",
           "name_jp": "トニートニー・チョッパー",
           "image": "chopper.jpg",
           "origin": "Grand Line",
@@ -147,11 +154,12 @@
           "crew_img": "strawhat.jpg",
           "battling": "Fighter - Use devil fruit power + medicinal skill",
           "avatar": "chopper_avatar.png",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Tony Tony Chopper"
         },
         {
           "name": "Usopp",
-          "crewName": "Usopp",
           "name_jp": "ウソップ",
           "image": "usopp.jpg",
           "origin": "East Blue",
@@ -163,7 +171,9 @@
           "crew_img": "strawhat.jpg",
           "battling": "Sniper - Use slingshot + plants",
           "avatar": "usopp_avatar.jpg",
-          "bounty": 1500000
+          "bounty": 1500000,
+          "memberName": "Straw Hat",
+          "crewName": "Usopp"
         }
       ]
     },
@@ -174,7 +184,6 @@
       "members": [
         {
           "name": "Trafalgar D. Water Law",
-          "crewName": "Trafalgar D. Water Law",
           "name_jp": "トラファルガー・Dディー・ワーテル・ロー",
           "image": "law.jpg",
           "origin": "North Blue",
@@ -186,7 +195,9 @@
           "crew_img": "heart.jpeg",
           "battling": "Swordman - Use devil fruit power + sword",
           "avatar": "law_avatar.png",
-          "bounty": 3000000
+          "bounty": 3000000,
+          "memberName": "Heart",
+          "crewName": "Trafalgar D. Water Law"
         }
       ]
     },
@@ -197,7 +208,6 @@
       "members": [
         {
           "name": "Eustass Kid",
-          "crewName": "Eustass Kid",
           "name_jp": "ユースタス・キッド",
           "image": "kid.jpg",
           "origin": "South Blue",
@@ -209,9 +219,12 @@
           "crew_img": "kidpirates.jpg",
           "battling": "Fighter - Use devil fruit power + sword",
           "avatar": "kid_avatar.png",
-          "bounty": 3000000
+          "bounty": 3000000,
+          "memberName": "Kid",
+          "crewName": "Eustass Kid"
         }
       ]
     }
-  ]
+  ],
+  "count": 3
 }

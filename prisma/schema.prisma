@@ -10,6 +10,7 @@ datasource db {
 model PirateGroup {
   name        String   @id
   totalBounty Int
+  image       String
   members     Member[]
 }
 
