@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import prisma from "../../lib/prisma";
+import prisma from "../../../lib/prisma";
 import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
 
 interface IParams extends ParsedUrlQuery {
@@ -15,10 +15,10 @@ const Detail = ({ feed }: MemberProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const { name } = context.params as IParams;
+  const { crewname } = context.params as IParams;
   const result = await prisma.member.findUnique({
     where: {
-      name: name.replace(/_/g, " "),
+      name: crewname?.replace(/_/g, " "),
     },
   });
   return {
@@ -29,17 +29,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const feed = await prisma.member.findMany({
-    select: {
-      name: true,
-    },
-  });
-
+  const groupFeed = await prisma.pirateGroup.findMany({select: { name: true, members: { select: { name: true }}}})
+  const paths = groupFeed.map((group) => group.members.map((groupMember) =>{return  { params: {name: group.name.replace(/\s/g, "_"), crewname: groupMember.name.replace(/\s/g, "_")} }} )).flat()
   return {
-    paths: feed?.map((member: any) => ({
-      params: { name: member.name.replace(/\s/g, "_") },
-    })),
-    fallback: false,
+    paths: paths,
+    fallback: false, 
   };
 };
 

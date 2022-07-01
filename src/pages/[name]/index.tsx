@@ -1,35 +1,50 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../lib/prisma";
-import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
+import MemberList from "@/components/list/member/MemberList";
+import CrewLayout from "@/components/utility/layout/crew/CrewLayout";
+import { CrewType } from "@/pages/index";
 
 interface IParams extends ParsedUrlQuery {
   name: string;
 }
-interface MemberProps {
-  feed: IMemberCard;
-}
-
-const Detail = ({ feed }: MemberProps) => {
-  return <MemberCard {...feed} />;
+const Detail = ({ feed, count }: CrewType) => {
+  return (
+    <CrewLayout>
+      <MemberList feed={feed} count={count} />;
+    </CrewLayout>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { name } = context.params as IParams;
-  const result = await prisma.member.findUnique({
+  const result = await prisma.pirateGroup.findUnique({
     where: {
       name: name.replace(/_/g, " "),
+    },
+    select: {
+      members: {
+        skip: 0,
+        take: 8,
+        orderBy: { name: "asc" },
+        select: {
+          name: true,
+          image: true,
+          position: true,
+          crew: true,
+        },
+      },
     },
   });
   return {
     props: {
-      feed: result,
+      feed: result?.members,
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const feed = await prisma.member.findMany({
+  const feed = await prisma.pirateGroup.findMany({
     select: {
       name: true,
     },

@@ -8,7 +8,7 @@
     "test:ci": "jest --ci",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "write": "node ./scripts/fetchAndWrite",
+    "write": "node ./scripts/writePirateGroups",
     "seed": "node ./scripts/seed",
     "fresh-seed": "npx prisma db push; npx prisma db pull; npx prisma generate; node ./scripts/seed"
   },

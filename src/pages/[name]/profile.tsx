@@ -1,23 +1,22 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../lib/prisma";
-import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
+import GroupCard, { IGroupCard } from "@/components/cards/group/GroupCard";
 
 interface IParams extends ParsedUrlQuery {
   name: string;
 }
 interface MemberProps {
-  feed: IMemberCard;
+  feed: IGroupCard;
 }
 
 const Detail = ({ feed }: MemberProps) => {
-  console.log("feed", feed);
-  return <MemberCard {...feed} />;
+  return <GroupCard {...feed} />;
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { name } = context.params as IParams;
-  const result = await prisma.member.findUnique({
+  const result = await prisma.pirateGroup.findUnique({
     where: {
       name: name.replace(/_/g, " "),
     },
@@ -30,7 +29,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const feed = await prisma.member.findMany({
+  const feed = await prisma.pirateGroup.findMany({
     select: {
       name: true,
     },
