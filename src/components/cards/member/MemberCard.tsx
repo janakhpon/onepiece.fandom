@@ -14,7 +14,7 @@ export interface IMemberCard {
   crew_img: string;
   battling: string;
   avatar: string;
-  bounty: string;
+  bounty: number;
 }
 
 const MemberCard: FC<IMemberCard> = ({
