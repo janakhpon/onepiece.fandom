@@ -1,18 +1,12 @@
 import { GetStaticProps } from "next";
 import Layout from "@/components/utility/layout/home/HomeLayout";
-import PiratesList from "@/components/list/group/PiratesList";
-import { IMemberCard } from "@/components/cards/member/MemberCard";
+import PiratesList, { IPiratesList } from "@/components/list/group/PiratesList";
 import prisma from "../lib/prisma";
 
-export interface CrewType {
-  feed: IMemberCard[];
-  count: number;
-}
-
-const Home = ({ feed, count }: CrewType) => {
+const Home = ({ feed, count }: IPiratesList) => {
   return (
     <Layout>
-      <PiratesList feed={feed} count={count}/>
+      <PiratesList feed={feed} count={count} />
     </Layout>
   );
 };
@@ -26,6 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
       select: {
         name: true,
         image: true,
+        totalBounty: true,
       },
     });
 

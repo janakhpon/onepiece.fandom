@@ -1,13 +1,8 @@
 import { FC } from "react";
+import { IPirates } from "../../list/group/PiratesList";
 import { withBasePath } from "../../../lib/helper";
 
-export interface IGroupCard {
-  name: string;
-  totalBounty: Number;
-  image: string;
-}
-
-const GroupCard: FC<IGroupCard> = ({ name, totalBounty, image }) => {
+const GroupCard: FC<IPirates> = ({ name, image, totalBounty }) => {
   return (
     <div className="px-4 mx-auto my-16 max-w-7xl sm:px-6 lg:px-8">
       <div className="overflow-hidden bg-white shadow sm:rounded-lg">

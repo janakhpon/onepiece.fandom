@@ -1,17 +1,16 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../lib/prisma";
-import MemberList from "@/components/list/member/MemberList";
+import MemberList, { IMemberList } from "@/components/list/member/MemberList";
 import CrewLayout from "@/components/utility/layout/crew/CrewLayout";
-import { CrewType } from "@/pages/index";
 
 interface IParams extends ParsedUrlQuery {
   name: string;
 }
-const Detail = ({ feed, count }: CrewType) => {
+const Detail = ({ feed }: IMemberList) => {
   return (
     <CrewLayout>
-      <MemberList feed={feed} count={count} />;
+      <MemberList feed={feed} />;
     </CrewLayout>
   );
 };
