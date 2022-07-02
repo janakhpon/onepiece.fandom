@@ -108,7 +108,7 @@ const MemberCard: FC<IMemberCard> = ({
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default MemberCard;
