@@ -1,13 +1,14 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../lib/prisma";
-import GroupCard, { IGroupCard } from "@/components/cards/group/GroupCard";
+import GroupCard from "@/components/cards/group/GroupCard";
+import { IPirates } from "@/components/list/group/PiratesList";
 
 interface IParams extends ParsedUrlQuery {
   name: string;
 }
 interface MemberProps {
-  feed: IGroupCard;
+  feed: IPirates;
 }
 
 const Detail = ({ feed }: MemberProps) => {
