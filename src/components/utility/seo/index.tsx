@@ -21,36 +21,36 @@ const favicons: Array<Favicons> = [
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: `${withBasePath("/favicon/apple-touch-icon.png")}`,
+    href: `${withBasePath("favicon/apple-touch-icon.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "512x512",
-    href: `${withBasePath("/favicon/android-chrome-512x512.png")}`,
+    href: `${withBasePath("favicon/android-chrome-512x512.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "192x192",
-    href: `${withBasePath("/favicon/android-chrome-192x192.png")}`,
+    href: `${withBasePath("favicon/android-chrome-192x192.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: `${withBasePath("/favicon/favicon-32x32.png")}`,
+    href: `${withBasePath("favicon/favicon-32x32.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "16x16",
-    href: `${withBasePath("/favicon/favicon-16x16.png")}`,
+    href: `${withBasePath("favicon/favicon-16x16.png")}`,
   },
-  {
-    rel: "manifest",
-    href: `${withBasePath("/favicon/manifest.json")}`,
-  },
+  // {
+  //   rel: "manifest",
+  //   href: `${withBasePath("favicon/manifest.json")}`,
+  // },
 ];
 
 const SEO = ({ title, description, image, url, sitetype }: SEOProps) => {
@@ -94,7 +94,7 @@ const SEO = ({ title, description, image, url, sitetype }: SEOProps) => {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta
         name="msapplication-TileImage"
-        content="/favicon/android-chrome-192x192.png"
+        content={`${withBasePath("favicon/android-chrome-192x192.png")}`} 
       />
       <meta name="theme-color" content="#ffffff" />
     </Head>
