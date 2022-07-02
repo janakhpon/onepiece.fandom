@@ -12,7 +12,7 @@ export interface CrewType {
 const Home = ({ feed, count }: CrewType) => {
   return (
     <Layout>
-      <PiratesList feed={feed} count={count} data-testid="index-list"/>
+      <PiratesList feed={feed} count={count}/>
     </Layout>
   );
 };
