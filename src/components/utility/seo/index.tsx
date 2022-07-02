@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import { withBasePath } from "@/lib/helper";
 import { metadata as siteMeta } from "@/config/siteConfig";
 
 export type SEOProps = {
@@ -21,35 +21,35 @@ const favicons: Array<Favicons> = [
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: "/favicon/apple-touch-icon.png",
+    href: `${withBasePath("/favicon/apple-touch-icon.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "512x512",
-    href: "/favicon/android-chrome-512x512.png",
+    href: `${withBasePath("/favicon/android-chrome-512x512.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "192x192",
-    href: "/favicon/android-chrome-192x192.png",
+    href: `${withBasePath("/favicon/android-chrome-192x192.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: "/favicon/favicon-32x32.png",
+    href: `${withBasePath("/favicon/favicon-32x32.png")}`,
   },
   {
     rel: "icon",
     type: "image/png",
     sizes: "16x16",
-    href: "/favicon/favicon-16x16.png",
+    href: `${withBasePath("/favicon/favicon-16x16.png")}`,
   },
   {
     rel: "manifest",
-    href: "/favicon/manifest.json",
+    href: `${withBasePath("/favicon/manifest.json")}`,
   },
 ];
 
@@ -58,9 +58,7 @@ const SEO = ({ title, description, image, url, sitetype }: SEOProps) => {
     ? `${siteMeta.siteName} | ${title}`
     : siteMeta.siteName;
   const pageDescription = description ? description : siteMeta.description;
-  const pageImage = image
-    ? `https://www.yangonstories.com/${image}`
-    : `https://www.yangonstories.com/${siteMeta.siteImage}`;
+  const pageImage = image ?? `${withBasePath(siteMeta.siteImage)}`;
   const pageUrl = url ? url : siteMeta.siteUrl;
   const pageType = sitetype ? sitetype : siteMeta.siteContentType;
 
