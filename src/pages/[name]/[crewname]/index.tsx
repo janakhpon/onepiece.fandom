@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../../lib/prisma";
-import { withBasePath } from "../../../lib/helper";
+import { withFullPath } from "../../../lib/helper";
 import SEO from "@/components/utility/seo";
 import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
 
@@ -26,7 +26,7 @@ const Detail = ({ feed }: MemberProps) => {
       <SEO
         title={feed["name"]}
         description={feed["summary"]}
-        image={withBasePath(`images/${feed["image"]}`)}
+        image={withFullPath(`images/${feed["image"]}`)}
       />
       <MemberCard {...feed} />
     </>

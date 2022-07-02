@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import SEO from '@/components/utility/seo'
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../lib/prisma";
-import { withBasePath } from "../../lib/helper";
+import { withFullPath } from "../../lib/helper";
 import MemberList, { IMemberList } from "@/components/list/member/MemberList";
 import CrewLayout from "@/components/utility/layout/crew/CrewLayout";
 
@@ -12,7 +12,7 @@ interface IParams extends ParsedUrlQuery {
 const Detail = ({ feed }: IMemberList) => {
   return (
     <>
-    <SEO title={feed[0]['crew']} description='List of Pirate Groups' image={withBasePath(`images/${feed[0]['crew_img']}`)} />
+    <SEO title={feed[0]['crew']} description='List of Pirate Groups' image={withFullPath(`images/${feed[0]['crew_img']}`)} />
     <CrewLayout>
       <MemberList feed={feed} />;
     </CrewLayout>
