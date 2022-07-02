@@ -1,6 +1,8 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import prisma from "../../../lib/prisma";
+import { withBasePath } from "../../../lib/helper";
+import SEO from "@/components/utility/seo";
 import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
 
 export interface IParams extends ParsedUrlQuery {
@@ -19,7 +21,16 @@ export interface IeachPirateGroup {
 }
 
 const Detail = ({ feed }: MemberProps) => {
-  return <MemberCard {...feed} />;
+  return (
+    <>
+      <SEO
+        title={feed["name"]}
+        description={feed["summary"]}
+        image={withBasePath(`images/${feed["image"]}`)}
+      />
+      <MemberCard {...feed} />
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -37,11 +48,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const groupFeed:IeachPirateGroup[] = await prisma.pirateGroup.findMany({
+  const groupFeed: IeachPirateGroup[] = await prisma.pirateGroup.findMany({
     select: { name: true, members: { select: { name: true } } },
   });
   const paths = groupFeed
-    .map((group:IeachPirateGroup) =>
+    .map((group: IeachPirateGroup) =>
       group.members.map((groupMember) => {
         return {
           params: {

@@ -1,13 +1,17 @@
 import { GetStaticProps } from "next";
+import SEO from "@src/components/utility/seo";
 import Layout from "@/components/utility/layout/home/HomeLayout";
 import PiratesList, { IPiratesList } from "@/components/list/group/PiratesList";
 import prisma from "../lib/prisma";
 
 const Home = ({ feed, count }: IPiratesList) => {
   return (
-    <Layout>
-      <PiratesList feed={feed} count={count} />
-    </Layout>
+    <>
+      <SEO />
+      <Layout>
+        <PiratesList feed={feed} count={count} />
+      </Layout>
+    </>
   );
 };
 

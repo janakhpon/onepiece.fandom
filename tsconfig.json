@@ -20,6 +20,7 @@
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
       "@/lib/*": ["./src/lib/*"],
+      "@/config/*": ["./src/config/*"],
       "@/styles/*": ["./src/styles/*"]
     }
   },
