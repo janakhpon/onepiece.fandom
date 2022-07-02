@@ -26,7 +26,7 @@ export default function PiratesList({ feed, count }: IPiratesList) {
           data-testid="cardList"
         >
           {feed.map(({ name, image, totalBounty }: IPirates) => (
-            <div key={name} className="relative group">
+            <div key={name} className="relative group" role="cardListItem">
               <div className="w-full overflow-hidden bg-gray-200 rounded-md min-h-80 aspect-w-1 aspect-h-1 group-hover:opacity-75 lg:h-80 lg:aspect-none">
                 <img
                   src={withBasePath(`images/${image}`)}
