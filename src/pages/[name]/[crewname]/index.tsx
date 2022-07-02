@@ -3,11 +3,19 @@ import { ParsedUrlQuery } from "querystring";
 import prisma from "../../../lib/prisma";
 import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
 
-interface IParams extends ParsedUrlQuery {
+export interface IParams extends ParsedUrlQuery {
   crewname: string;
 }
-interface MemberProps {
+
+export interface MemberProps {
   feed: IMemberCard;
+}
+export interface IeachPirateMember {
+  name: string;
+}
+export interface IeachPirateGroup {
+  name: string;
+  members: IeachPirateMember[];
 }
 
 const Detail = ({ feed }: MemberProps) => {
@@ -29,11 +37,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const groupFeed = await prisma.pirateGroup.findMany({
+  const groupFeed:IeachPirateGroup[] = await prisma.pirateGroup.findMany({
     select: { name: true, members: { select: { name: true } } },
   });
   const paths = groupFeed
-    .map((group) =>
+    .map((group:IeachPirateGroup) =>
       group.members.map((groupMember) => {
         return {
           params: {
