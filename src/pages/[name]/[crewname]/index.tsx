@@ -4,7 +4,7 @@ import prisma from "../../../lib/prisma";
 import MemberCard, { IMemberCard } from "@/components/cards/member/MemberCard";
 
 interface IParams extends ParsedUrlQuery {
-  name: string;
+  crewname: string;
 }
 interface MemberProps {
   feed: IMemberCard;
@@ -16,11 +16,9 @@ const Detail = ({ feed }: MemberProps) => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { crewname } = context.params as IParams;
-  let name = "";
-  typeof crewname === "string" ? name == crewname : crewname;
   const result = await prisma.member.findUnique({
     where: {
-      name: name?.replace(/_/g, " "),
+      name: crewname?.replace(/_/g, " "),
     },
   });
   return {
