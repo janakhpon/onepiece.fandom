@@ -14,7 +14,7 @@ const Detail = ({ feed }: IMemberList) => {
     <>
     <SEO title={feed[0]['crew']} description='List of Pirate Groups' image={withFullPath(`images/${feed[0]['crew_img']}`)} />
     <CrewLayout>
-      <MemberList feed={feed} />;
+      <MemberList feed={feed} />
     </CrewLayout>
     </>
   );
@@ -35,6 +35,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
           name: true,
           image: true,
           position: true,
+          origin: true,
           crew: true,
           crew_img: true,
         },

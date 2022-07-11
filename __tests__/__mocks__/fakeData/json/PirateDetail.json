@@ -1,0 +1,19 @@
+{
+  "feed": {
+    "name": "Monkey D. Luffy",
+    "name_jp": "モンキー・Dディー・ルフィ",
+    "image": "luffy.jpg",
+    "origin": "East Blue",
+    "age": "19",
+    "position": "Captain",
+    "devilfruit": "Gum-Gum Fruit",
+    "summary": "Monkey D. Luffy, also known as ' Straw Hat Luffy' and commonly as 'Straw Hat',[7] is the main protagonist of the manga and anime, One Piece. He is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as one of its top fighters.[24] His lifelong dream is to become the Pirate King by finding the legendary treasure left behind by the late Gol D. Roger.[25] He believes that being the Pirate King means having the most freedom in the world.[26]  Born in Foosha Village, Luffy accidentally ate the Gomu Gomu no Mi at age 7, which turned his body into rubber.[27] He met 'Red-Haired' Shanks, who gave Luffy the very Straw Hat that has become Luffy's signature accessory, having gifted it to the boy as part of a promise for them to meet again someday. Luffy is the son of the Revolutionary leader Monkey D. Dragon,[28] the grandson of the Marine hero Monkey D. Garp,[29] the sworn brother of the late 'Fire Fist' Portgas D. Ace and Revolutionary Chief-of-Staff Sabo, and the foster son of Curly Dadan. He is one of the few people in the world who carries the Will of D.",
+    "crew": "Straw Hat",
+    "crew_img": "strawhat.jpg",
+    "battling": "Fighter - Use Devil Fruit power with Haki",
+    "avatar": "luffy_avatar.jpg",
+    "bounty": 3000000,
+    "memberName": "Straw Hat",
+    "crewName": "Monkey D. Luffy"
+  }
+}

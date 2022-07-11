@@ -30,9 +30,8 @@ const MemberCard: FC<IMemberCard> = ({
   crew_img,
   battling,
   avatar,
-  bounty
+  bounty,
 }) => {
-
   return (
     <div className="px-4 mx-auto my-16 max-w-7xl sm:px-6 lg:px-8">
       <div className="overflow-hidden bg-white shadow sm:rounded-lg">
@@ -71,44 +70,46 @@ const MemberCard: FC<IMemberCard> = ({
         <div className="px-4 py-5 border-t border-gray-200 sm:px-6">
           <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
             <div className="sm:col-span-1">
-              <dt className="text-sm font-medium text-gray-500">Full name</dt>
-              <dd className="mt-1 text-sm text-gray-900">Margot Foster</dd>
+              <dt className="text-sm font-medium text-gray-500">
+                Japanese Name
+              </dt>
+              <dd className="mt-1 text-sm text-gray-900">{name_jp}</dd>
             </div>
             <div className="sm:col-span-1">
-              <dt className="text-sm font-medium text-gray-500">
-                Application for
-              </dt>
-              <dd className="mt-1 text-sm text-gray-900">Backend Developer</dd>
+              <dt className="text-sm font-medium text-gray-500">Role</dt>
+              <dd className="mt-1 text-sm text-gray-900">{position} of {crew} Pirates</dd>
             </div>
             <div className="sm:col-span-1">
-              <dt className="text-sm font-medium text-gray-500">
-                Email address
-              </dt>
-              <dd className="mt-1 text-sm text-gray-900">
-                margotfoster@example.com
-              </dd>
+              <dt className="text-sm font-medium text-gray-500">Origin</dt>
+              <dd className="mt-1 text-sm text-gray-900">{origin}</dd>
             </div>
             <div className="sm:col-span-1">
+              <dt className="text-sm font-medium text-gray-500">Bounty</dt>
+              <dd className="mt-1 text-sm text-gray-900">${bounty}</dd>
+            </div>
+            <div className="sm:col-span-1">
+              <dt className="text-sm font-medium text-gray-500">Age</dt>
+              <dd className="mt-1 text-sm text-gray-900">{age}</dd>
+            </div>
+            <div className="sm:col-span-1">
+              <dt className="text-sm font-medium text-gray-500">Devilfruit</dt>
+              <dd className="mt-1 text-sm text-gray-900">{devilfruit}</dd>
+            </div>
+            <div className="sm:col-span-2">
               <dt className="text-sm font-medium text-gray-500">
-                Salary expectation
+                Fighting Method
               </dt>
-              <dd className="mt-1 text-sm text-gray-900">$120,000</dd>
+              <dd className="mt-1 text-sm text-gray-900">{battling}</dd>
             </div>
             <div className="sm:col-span-2">
               <dt className="text-sm font-medium text-gray-500">About</dt>
-              <dd className="mt-1 text-sm text-gray-900">
-                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim
-                incididunt cillum culpa consequat. Excepteur qui ipsum aliquip
-                consequat sint. Sit id mollit nulla mollit nostrud in ea officia
-                proident. Irure nostrud pariatur mollit ad adipisicing
-                reprehenderit deserunt qui eu.
-              </dd>
+              <dd className="mt-1 text-sm text-gray-900">{summary}</dd>
             </div>
           </dl>
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default MemberCard;

@@ -33,3 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# E2E test output files
+cypress/screenshots
+cypress/videos

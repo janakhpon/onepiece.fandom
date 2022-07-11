@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { withBasePath } from "@/lib/helper";
-import { metadata as siteMeta } from "@/config/siteConfig";
+import { withBasePath } from "../../../lib/helper";
+import { metadata as siteMeta } from "../../../config/siteConfig";
 
 export type SEOProps = {
   title?: string;

@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import SEO from "@src/components/utility/seo";
+import SEO from "@/components/utility/seo";
 import Layout from "@/components/utility/layout/home/HomeLayout";
 import PiratesList, { IPiratesList } from "@/components/list/group/PiratesList";
 import prisma from "../lib/prisma";
