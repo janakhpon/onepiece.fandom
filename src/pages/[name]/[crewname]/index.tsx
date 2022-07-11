@@ -21,6 +21,7 @@ export interface IeachPirateGroup {
 }
 
 const Detail = ({ feed }: MemberProps) => {
+  console.log("feed", feed);
   return (
     <>
       <SEO

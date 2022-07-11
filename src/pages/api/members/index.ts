@@ -19,6 +19,7 @@ export default async function handler(
           name: true,
           image: true,
           position: true,
+          origin: true,
         },
       });
     } catch (err) {}
