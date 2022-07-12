@@ -8,7 +8,7 @@
     "lint": "next lint",
     "test": "jest --verbose --watchAll=true",
     "test:ci": "jest --ci --verbose",
-    "test:coverage": "jest --verbose --coverage",
+    "test:coverage": "jest --verbose --coverage --coverageDirectory",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",

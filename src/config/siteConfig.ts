@@ -1,6 +1,6 @@
 const metadata = {
   siteName: "One Piece Fandom",
-  description: "Nextjs Starter template",
+  description: "NextJs starter with OnePiece Fandom",
   siteUrl: `https://janakhpon.github.io/onepiece.fandom/`,
   siteImage: "preview.png",
   siteContent:
